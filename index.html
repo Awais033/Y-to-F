@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: grey;
+        color: white;
+    }
+    button{
+        margin-top: 2%;
+        background-color: rgb(163, 198, 233);
+    }
+    h1{
+        border: 2px;
+        color: rgb(58, 50, 40);
+
+    }
+    
+</style>
+<body>
+    <form onsubmit="doSum(event)">
+    <h1>
+        Yard To Square Feet
+    </h1>
+    Yard: <input id="sqyard" type="number" required step="0.1"> 
+    <br>
+    <button> convert</button>
+    <p id="result"></p>
+    </form>
+
+    <script>
+function doSum(event){
+event.preventDefault();
+
+let SquareYard=document.querySelector("#sqyard").value;
+
+console.log( SquareYard)
+let result=Number(SquareYard * 9)
+
+
+let messege=`The Square feet is ${result}`
+document.querySelector("#result") .innerHTML = messege
+
+
+
+
+
+
+}
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>
